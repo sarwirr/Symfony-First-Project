@@ -32,4 +32,26 @@ class TodoController extends AbstractController
 
         return $this->render('todo/index.html.twig');
     }
+
+    #[Route('/todo/{name}/{content}', name: 'todo.add')]
+    public function addtodo (request $request, $same, $content)
+    {
+        $session= $request->getSession();
+        //verifier si on a un tableau
+        if($session->has('todo')){
+            
+        }
+        //si oui
+            //verifier si on a un todo avec le meme nom
+                //si oui afficher erreur
+                //sinon 
+                    //ajoute +message de success
+
+
+
+        //sinon 
+            //afficher une erreur et on redirect vers le controlleur index
+    }
+
+
 }
